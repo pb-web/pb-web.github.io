@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: sans-serif; }
+
+.layout-parallaxbody {
+  height: 200vh;
+  min-height: 1200px;
+  scroll-snap-type: y mandatory;
+  background-color: #222;
+  background: linear-gradient(#111 0, #111 400px, #f38d39 800px); }
+
+.helloworld {
+  color: green;
+  font-weight: bold; }
+
+.parallaxtitle {
+  position: fixed;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  color: #ccc;
+  font-size: 2rem;
+  white-space: nowrap; }
+  .parallaxtitle > h1 {
+    display: flex;
+    position: relative; }
+
+.parallaxtitle--dark {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #111; }
+
+@media screen and (min-width: 768px) {
+  .parallaxtitle {
+    font-size: 3rem; } }

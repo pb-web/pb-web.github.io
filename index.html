@@ -1,8 +1,37 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Hello world</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-	Hello world!
+<body class="layout-parallaxbody">
+    <section class="parallaxtitle">
+        <h1>
+            <div class="lax" data-lax-translate-y="0 0, 400 -600" data-lax-opacity="0 1, 400 0">pb-web.</div>
+            <div class="lax" data-lax-translate-y="0 0, 400 0" data-lax-opacity="0 1, 400 0">git</div>
+            <div class="lax" data-lax-translate-y="0 0, 400 0" data-lax-translate-x="0 0, 400 800" data-lax-opacity="0 1, 400 0">hub.io</div>
+            <div class="parallaxtitle--dark">
+                    <div class="lax" data-lax-translate-y="0 vh, 400 0" data-lax-opacity="0 0, 400 1">pb-web.</div>
+                    <div class="lax" data-lax-translate-y="0 0, 400 0" data-lax-opacity="0 0, 400 1">git</div>
+                    <div class="lax" data-lax-translate-y="0 0, 400 0" data-lax-translate-x="0 1200, 400 0" data-lax-opacity="0 0, 400 1">hub.io</div>
+                </div>
+                </h1>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+    <script>
+        window.onload = function() {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+        }
+    </script>
 </body>
 </html>
