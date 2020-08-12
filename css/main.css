@@ -1,6 +1,27 @@
 body {
   margin: 0;
-  font-family: sans-serif; }
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #202e45;
+  background-color: #f2f2f4; }
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.5rem; }
+
+a {
+  color: inherit; }
+
+footer {
+  margin: 2em 0; }
+
+.content {
+  margin: 5em 20px; }
+
+@media (min-width: 768px) {
+  .content {
+    width: 80vw;
+    max-width: 660px;
+    margin: 8em auto; } }
 
 .layout-parallaxbody {
   height: 200vh;
@@ -9,35 +30,35 @@ body {
   background-color: #222;
   background: linear-gradient(#111 0, #111 400px, #f38d39 800px); }
 
-.helloworld {
-  color: green;
-  font-weight: bold; }
-
-.parallaxtitle {
-  position: fixed;
-  right: 0;
-  left: 0;
+.logo {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
-  color: #ccc;
   font-size: 2rem;
-  white-space: nowrap; }
-  .parallaxtitle > h1 {
-    display: flex;
-    position: relative; }
+  border-bottom: .2em solid;
+  max-width: 80vw; }
 
-.parallaxtitle--dark {
-  position: absolute;
-  display: flex;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  color: #111; }
+.logo--title {
+  flex-grow: 1;
+  text-align: right;
+  font-size: inherit; }
 
-@media screen and (min-width: 768px) {
-  .parallaxtitle {
-    font-size: 3rem; } }
+.logo--gfx {
+  height: 2em;
+  margin: .25em auto .25em .5em; }
+  .logo--gfx > svg {
+    fill: currentColor;
+    height: 100%; }
+
+.logo-main {
+  margin-top: 50vh; }
+
+.logo-small {
+  margin-right: 20px;
+  max-width: calc((100vw - 700px) / 2 + 700px);
+  font-size: 1.125rem; }
+
+@media (min-width: 768px) {
+  .logo {
+    font-size: 3rem; }
+  .logo-small {
+    font-size: 1.5rem; } }
