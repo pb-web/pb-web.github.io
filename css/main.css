@@ -11,6 +11,9 @@ p {
 a {
   color: inherit; }
 
+svg {
+  max-width: none; }
+
 footer {
   margin: 2em 0; }
 
